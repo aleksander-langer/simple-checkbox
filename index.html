@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Checkbox</title>
+        <style>
+            .square-checkbox {
+                display: none;
+            }
+            
+            .square-checkbox + label {
+                display: inline-block;
+                position: relative;
+                background: url('nope.png') no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 20px;
+                width: 20px;
+                transition: .3s;
+            }
+            
+            .square-checkbox:checked + label:after {
+                /*content: '\2714';*/
+                content: '';
+                position: absolute;
+                background: url('yep.png') no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 20px;
+                width: 20px;
+                top: 0px;
+                left: 0px;
+                transition: .3s;
+            }
+            
+            label{
+                cursor: pointer;
+            }
+           
+            .radio-checkbox {
+                display: none;
+            }
+            
+            .radio-checkbox + label {
+                display: inline-block;
+                position: relative;
+                background: url('uncheck.png') no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 20px;
+                width: 20px;
+                transition: .3s;
+            }
+            
+            .radio-checkbox:checked + label:after {
+                /*content: '\2714';*/
+                content: '';
+                position: absolute;
+                background: url('check.png') no-repeat;
+                background-position: center;
+                background-size: cover;
+                height: 20px;
+                width: 20px;
+                top: 0px;
+                left: 0px;
+                transition: .3s;
+            }
+            
+            .margin{
+                margin-top: 15px;
+            }
+            
+            .container{
+                width: 1170px;
+                margin: 20px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- checkbox -->
+            <div class="margin">
+                <input type="checkbox" id="checkbox-1-1" class="square-checkbox" />
+                <label for="checkbox-1-1">&nbsp;</label>
+                <label for="checkbox-1-1">Et mortuus est Dei Filius, prorsus credibile est, quia ineptum est. Et sepultus resurrexit; certum est, quia impossibile est</label>
+            </div>
+            
+            <!-- radio -->
+            <div class="margin">
+                <input type="radio" id="radio-1-1" name="radio-1-set" class="radio-checkbox">
+                <label for="radio-1-1">&nbsp;</label>
+                <label for="radio-1-1">credo, quia absurdum</label>
+            </div>
+            <div class="margin">
+                <input type="radio" id="radio-1-2" name="radio-1-set" class="radio-checkbox">
+                <label for="radio-1-2">&nbsp;</label>
+                <label for="radio-1-2">cogito ergo sunt</label>
+            </div>
+        </div>
+    </body>
+</html>
